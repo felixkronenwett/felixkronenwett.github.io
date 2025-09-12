@@ -1,54 +1,56 @@
-<html>
+<!doctype html>
+<html lang="de">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Newsreader:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
     />
     <title>Felix Kronenwett</title>
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
     </style>
   </head>
   <body>
+    <div id="top"></div>
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3 bg-white">
-          <a href="#" onclick="location.reload(); return false;" class="flex items-center gap-4 text-[#111418]">
+      <div class="layout-container flex h-full grow flex-col pt-16">
+        <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-6 md:px-10 h-16 bg-white/95 backdrop-blur shadow-sm">
+          <a href="#top" class="flex items-center gap-4 text-[#111418]">
             <div class="size-7">
               <img src="logo.svg" alt="Logo" class="w-full h-full" />
             </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em]">Felix Kronenwett</h2>
+            <h2 class="text-[#111418] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em]">Felix Kronenwett</h2>
           </a>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-[18px] font-medium leading-normal" href="#home">Home</a>
-              <a class="text-[#111418] text-[18px] font-medium leading-normal" href="#experience">Experience</a>
-              <a class="text-[#111418] text-[18px] font-medium leading-normal" href="#education">Education</a>
-              <a class="text-[#111418] text-[18px] font-medium leading-normal" href="#publications">Publications</a>
-            </div>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style='background-image: url("bild_fk.jpg");'
-            ></div>
+          <div class="flex flex-1 justify-end gap-6 md:gap-8">
+            <nav class="flex items-center gap-6 md:gap-9">
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#top">Home</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#experience">Experience</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#education">Education</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#publications">Publications</a>
+            </nav>
+            <img
+              src="bild_fk.jpg"
+              alt="Profilbild"
+              class="rounded-full size-10 object-cover"
+            />
           </div>
         </header>
-        <div id="home" class="px-40 flex flex-1 justify-center py-5">
+
+        <div id="home" class="px-5 sm:px-10 lg:px-20 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="flex p-4 @container">
               <div class="flex w-full flex-col gap-4 items-center">
                 <div class="flex gap-4 flex-col items-center">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
-                    style='background-image: url("bild_fk.jpg");'
-                  ></div>
-                  <div class="flex flex-col items-center justify-center justify-center">
+                  <img src="bild_fk.jpg" alt="Profilbild von Felix Kronenwett" class="rounded-full min-h-32 w-32 h-32 object-cover" />
+                  <div class="flex flex-col items-center justify-center">
                     <p class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Felix Kronenwett</p>
                     <p class="text-[#637588] text-base font-normal leading-normal text-center">Scientific employee at Fraunhofer IOSB</p>
                     <div style="height: 10px;"></div>
@@ -64,6 +66,7 @@
                     rel="noopener noreferrer"
                     title="Google Scholar"
                     class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#f0f2f4] hover:bg-[#e5e7eb]"
+                    aria-label="Google Scholar"
                   >
                     <img
                       width="24"
@@ -79,6 +82,7 @@
                     rel="noopener noreferrer"
                     title="ORCID"
                     class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#f0f2f4] hover:bg-[#e5e7eb]"
+                    aria-label="ORCID"
                   >
                     <img
                       width="24"
@@ -88,40 +92,45 @@
                       style="filter: grayscale(1) brightness(0.7);"
                     />
                   </a>
-                   <a
+                  <a
                     href="https://publica.fraunhofer.de/entities/person/61402c92-60c0-4e2d-813f-a7741f26b059/publications"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Fraunhofer Publica"
                     class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#f0f2f4] hover:bg-[#e5e7eb]"
-                   >
-                     <svg
-                       xmlns="http://www.w3.org/2000/svg"
-                       width="24"
-                       height="24"
-                       viewBox="0 0 41.507 41.717"
-                       style="filter: grayscale(1) brightness(0.9);"
-                     >
-                        <g>
-                          <path fill="#179c7d" d="M0 41.697C9.874 36.614 24.338 28.395 41.507 16.38V12.347C26.396 22.233 11.031 30.171 0 35.422v6.275z"/>
-                          <path fill="#179c7d" d="M0 29.654c10.994-4.479 26.36-11.399 41.507-20.408V7.255C27.271 14.317 12.48 18.737 0 21.493v8.161z"/>
-                          <path fill="#179c7d" d="M41.507 41.717V21.432c-9.45 7.966-18.81 14.864-26.671 20.285h26.671z"/>
-                          <path fill="#179c7d" d="M9.53 41.717c7.465-4.432 16.526-10.215 25.55-16.974 2.105-1.578 4.255-3.203 6.428-4.883v-2.514C28.151 27.359 14.519 35.706 3.869 41.717h5.661z"/>
-                          <path fill="#179c7d" d="M0 18.542c12.14-2.135 26.993-5.976 41.507-12.874V3.407C26.881 9.973 12.242 12.757 0 13.748v4.794z"/>
-                          <path fill="#179c7d" d="M0 0v11.62c.907-.056 1.831-.121 2.775-.194C12.868 10.65 26.642 8.866 41.507 2.439V0H0z"/>
-                          <path fill="#fff" d="M0 11.62v2.128c12.242-.991 26.881-3.775 41.507-10.341V2.439C26.643 8.866 12.868 10.65 2.775 11.426c-.944.073-1.868.138-2.775.194z"/>
-                          <path fill="#fff" d="M0 21.493c12.48-2.756 27.271-7.177 41.507-14.238V5.669C26.993 12.566 12.14 16.407 0 18.542v2.951z"/>
-                          <path fill="#fff" d="M0 35.422c11.031-5.251 26.396-13.189 41.507-23.075V9.246C26.36 18.255 10.994 25.175 0 29.654v5.768z"/>
-                          <path fill="#fff" d="M9.53 41.717h5.308c7.861-5.42 17.22-12.32 26.67-20.285v-1.572c-2.173 1.68-4.322 3.305-6.428 4.883-9.024 6.759-18.085 12.552-25.55 16.974z"/>
-                          <path fill="#fff" d="M0 41.717h3.869c10.65-6.011 24.282-14.357 37.638-24.371v-.966C24.338 28.396 9.874 36.614 0 41.697z"/>
-                        </g>
-                      </svg>
+                    aria-label="Fraunhofer Publica"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 41.507 41.717"
+                      style="filter: grayscale(1) brightness(0.9);"
+                      role="img"
+                      aria-label="Fraunhofer-Logo"
+                    >
+                      <g>
+                        <path fill="#179c7d" d="M0 41.697C9.874 36.614 24.338 28.395 41.507 16.38V12.347C26.396 22.233 11.031 30.171 0 35.422v6.275z"/>
+                        <path fill="#179c7d" d="M0 29.654c10.994-4.479 26.36-11.399 41.507-20.408V7.255C27.271 14.317 12.48 18.737 0 21.493v8.161z"/>
+                        <path fill="#179c7d" d="M41.507 41.717V21.432c-9.45 7.966-18.81 14.864-26.671 20.285h26.671z"/>
+                        <path fill="#179c7d" d="M9.53 41.717c7.465-4.432 16.526-10.215 25.55-16.974 2.105-1.578 4.255-3.203 6.428-4.883v-2.514C28.151 27.359 14.519 35.706 3.869 41.717h5.661z"/>
+                        <path fill="#179c7d" d="M0 18.542c12.14-2.135 26.993-5.976 41.507-12.874V3.407C26.881 9.973 12.242 12.757 0 13.748v4.794z"/>
+                        <path fill="#179c7d" d="M0 0v11.62c.907-.056 1.831-.121 2.775-.194C12.868 10.65 26.642 8.866 41.507 2.439V0H0z"/>
+                        <path fill="#fff" d="M0 11.62v2.128c12.242-.991 26.881-3.775 41.507-10.341V2.439C26.643 8.866 12.868 10.65 2.775 11.426c-.944.073-1.868.138-2.775.194z"/>
+                        <path fill="#fff" d="M0 21.493c12.48-2.756 27.271-7.177 41.507-14.238V5.669C26.993 12.566 12.14 16.407 0 18.542v2.951z"/>
+                        <path fill="#fff" d="M0 35.422c11.031-5.251 26.396-13.189 41.507-23.075V9.246C26.36 18.255 10.994 25.175 0 29.654v5.768z"/>
+                        <path fill="#fff" d="M9.53 41.717h5.308c7.861-5.42 17.22-12.32 26.67-20.285v-1.572c-2.173 1.68-4.322 3.305-6.428 4.883-9.024 6.759-18.085 12.552-25.55 16.974z"/>
+                        <path fill="#fff" d="M0 41.717h3.869c10.65-6.011 24.282-14.357 37.638-24.371v-.966C24.338 28.396 9.874 36.614 0 41.697z"/>
+                      </g>
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
+
             <div style="height: 20px;"></div>
-            <h2 id="experience" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Experience</h2>
+
+            <h2 id="experience" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 scroll-mt-20">Experience</h2>
             <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
               <div class="flex flex-col items-center gap-1 pt-3">
                 <div class="text-[#111418]" data-icon="TextHThree" data-size="24px" data-weight="regular">
@@ -151,7 +160,7 @@
                 <p class="text-[#111418] text-base font-medium leading-normal">Studentische Hilfskraft</p>
                 <p class="text-[#637588] text-base font-normal leading-normal">Fraunhofer IOSB, Karlsruhe, 2020 - 2021</p>
               </div>
-	      <div class="flex flex-col items-center gap-1 pb-3">
+              <div class="flex flex-col items-center gap-1 pb-3">
                 <div class="w-[1.5px] bg-[#dce0e5] h-2"></div>
                 <div class="text-[#111418]" data-icon="TextHThree" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 76 66">
@@ -161,13 +170,15 @@
                   </svg>
                 </div>
               </div>
-	      <div class="flex flex-1 flex-col py-3">
+              <div class="flex flex-1 flex-col py-3">
                 <p class="text-[#111418] text-base font-medium leading-normal">Werkstudent / Duales Studium</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">	Stöber Antriebstechnik GmbH + Co. KG, Pforzheim, 2014 - 2017</p>
+                <p class="text-[#637588] text-base font-normal leading-normal">Stöber Antriebstechnik GmbH + Co. KG, Pforzheim, 2014 - 2017</p>
               </div>
             </div>
+
             <div style="height: 20px;"></div>
-            <h2 id="education" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Education</h2>
+
+            <h2 id="education" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 scroll-mt-20">Education</h2>
             <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
               <div class="flex flex-col items-center gap-1 pt-3">
                 <div class="text-[#111418]" data-icon="GraduationCap" data-size="24px" data-weight="regular">
@@ -198,8 +209,10 @@
                 <p class="text-[#637588] text-base font-normal leading-normal">DHBW Karlsruhe, 2014 - 2017</p>
               </div>
             </div>
+
             <div style="height: 20px;"></div>
-            <h2 id="publications" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Publications</h2>
+
+            <h2 id="publications" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 scroll-mt-20">Publications</h2>
             <div class="px-4 py-3">
               <label class="flex flex-col min-w-40 h-12 w-full">
                 <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
@@ -219,25 +232,27 @@
                     placeholder="Suche nach Titel oder Autor"
                     class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-full placeholder:text-[#637588] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
                     value=""
+                    aria-label="Publikationen suchen"
                   />
                 </div>
               </label>
             </div>
             <div class="flex gap-3 px-4 py-3 items-center">
               <label for="sort-publications" class="text-[#637588] text-base font-normal">Sortieren nach:</label>
-              <select id="sort-publications" class="form-select rounded-lg px-2 py-1 border bg-[#f0f2f4] text-[#111418]">
-                <option value="citations-desc">Zitationen</option>
-                <option value="year-desc">Jahr (absteigend)</option>
-                <option value="year-asc">Jahr (aufsteigend)</option>
-                <option value="title-asc">Alphabetisch (A–Z)</option>
-                <option value="title-desc">Alphabetisch (Z–A)</option>
+              <select id="sort-publications" class="form-select rounded-lg px-7 py-1 border bg-[#f0f2f4] text-[#111418]">
+                <option value="citations-desc">citations</option>
+                <option value="year-desc">year (desc.)</option>
+                <option value="year-asc">year (asc.)</option>
+                <option value="title-asc">(A–Z)</option>
+                <option value="title-desc">(Z–A)</option>
               </select>
             </div>
+
             <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
               data-year="2024"
               data-title="Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
-              data-citations="8">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              data-citations="12">
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning
@@ -255,11 +270,12 @@
                 </div>
               </div>
             </div>
+
             <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
               data-year="2022"
               data-title="Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning"
               data-citations="3">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning
@@ -276,11 +292,12 @@
                 </div>
               </div>
             </div>
+
             <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
               data-year="2024"
               data-title="Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
               data-citations="2">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures
@@ -303,7 +320,7 @@
               data-year="2023"
               data-title="Explainable AI for sensor-based sorting systems"
               data-citations="2">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Explainable AI for sensor-based sorting systems
@@ -326,16 +343,16 @@
               data-year="2023"
               data-title="Regression-based age prediction of plastic waste using hyperspectral imaging"
               data-citations="1">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Regression-based age prediction of plastic waste using hyperspectral imaging
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Klingenberg, P., Maier, G., Längle, T., Metzsch-Zilligen, E., ... (2023)
+                  Kronenwett, F., Klingenberg, P., Maier, G., Längle, T., Metzsch-Zilligen, E., Beyerer, J. (2023)
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Proc. 6th Int. Conf. Opt. Characterization Mater., 51-63
+                  OCM 2023-6th International Conference on Optical Characterization of Materials
                 </p>
                 <div class="flex gap-2 mt-2">
                   <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
@@ -349,16 +366,16 @@
               data-year="2021"
               data-title="Developing a handheld NIR sensor for the detection of ripening in grapevine"
               data-citations="1">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Developing a handheld NIR sensor for the detection of ripening in grapevine
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., ... (2021)
+                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., Kicherer, A. (2021)
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  of Materials, 69
+                  OCM 2021-5th International Conference on Optical Characterization of Materials
                 </p>
                 <div class="flex gap-2 mt-2">
                   <a href="https://core.ac.uk/download/pdf/478115291.pdf#page=85" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
@@ -371,7 +388,7 @@
               data-year="2025"
               data-title="Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models
@@ -394,7 +411,7 @@
               data-year="2025"
               data-title="Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems
@@ -417,7 +434,7 @@
               data-year="2024"
               data-title="Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs
@@ -439,7 +456,7 @@
               data-year="2023"
               data-title="KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung
@@ -448,12 +465,12 @@
                   Kronenwett, F., Maier, G., Schulte, H., Tron, N., Krähmer, A. (2023)
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Julius-Kühn-Archiv, 2023
+                  9. Tagung für Arznei-und Gewürzpflanzenforschung
                 </p>
                 <div class="flex gap-2 mt-2">
-                  <a href="LINK_ZUM_PDF" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="LINK_ZUM_JOURNAL" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/DOI_NUMBER" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
+                  <a href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00054518/JKA_476_2023_4.pdf" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
+                  <a href="https://www.openagrar.de/receive/openagrar_mods_00089187" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
+                  <a href="https://doi.org/10.5073/20230821-134542-0" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
                 </div>
               </div>
             </div>
@@ -462,21 +479,21 @@
               data-year="2021"
               data-title="Ripening detection in grapevine: development of a handheld NIR sensor"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Ripening detection in grapevine: development of a handheld NIR sensor
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., ... (2021)
+                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., Kicherer, A. (2021)
                 </p>
                 <p class="text-[#637588] text-sm font-normal leading-normal">
                   13th Young Scientists Meeting 2021, 32
                 </p>
                 <div class="flex gap-2 mt-2">
-                  <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/c3572d75-8c38-4cd9-abb3-7b9a8922a853/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://www.openagrar.de/receive/openagrar_mods_00089182" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.5073/20230821-132157-0" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
+                  <a href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00042001/Berichte-JKI-213-32.pdf" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
+                  <a href="https://www.openagrar.de/receive/openagrar_mods_00074577" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
+                  <a href="https://doi.org/10.5073/20211001-083036" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
                 </div>
               </div>
             </div>
@@ -485,7 +502,7 @@
               data-year="2025"
               data-title="Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
               data-citations="0">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>
+              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
               <div class="flex flex-1 flex-col justify-center">
                 <p class="text-[#111418] text-base font-medium leading-normal">
                   Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared
@@ -501,7 +518,7 @@
                 </div>
               </div>
             </div>
-            
+
             <script>
               document.querySelector('input[placeholder="Suche nach Titel oder Autor"]').addEventListener('input', function(e) {
                 const query = e.target.value.toLowerCase();
@@ -511,20 +528,17 @@
                 });
               });
             </script>
-            
+
             <script>
               function getYear(entry) {
                 return parseInt(entry.getAttribute('data-year'), 10) || 0;
               }
-
               function getTitle(entry) {
                 return entry.getAttribute('data-title')?.toLowerCase() || '';
               }
-
               function getCitations(entry) {
                 return parseInt(entry.getAttribute('data-citations'), 10) || 0;
               }
-
               document.getElementById('sort-publications').addEventListener('change', function(e) {
                 const sortVal = e.target.value;
                 const container = document.querySelector('.layout-content-container');
@@ -543,6 +557,7 @@
 
           </div>
         </div>
+
         <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
