@@ -1,0 +1,117 @@
+items:
+  - year: 2024
+    title: "Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
+    authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
+    venue: "Waste Management & Research 42 (9), 788-796, 2024"
+    citations: 11
+    links:
+      pdf: "https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410"
+      journal: "https://journals.sagepub.com/doi/full/10.1177/0734242X241231410"
+      doi: "https://doi.org/10.1177/0734242X241231410"
+
+  - year: 2022
+    title: "Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning"
+    authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
+    venue: "Recy & DepoTech-Konferenz, 2022"
+    citations: 3
+    links:
+      pdf: "https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/"
+      journal: "https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/"
+
+  - year: 2024
+    title: "Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
+    authors: "F Kronenwett, G Maier, T Längle"
+    venue: "Sensor-Based Sorting & Control, 2024"
+    citations: 2
+    links:
+      pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/465d1b30-02df-4ef9-a5bd-8aa453a695a8/content"
+      journal: "https://doi.org/10.2370/9783844094138"
+      doi: "https://doi.org/10.24406/h-464294"
+
+  - year: 2023
+    title: "Explainable AI for sensor-based sorting systems"
+    authors: "M Anneken, M Veerappa, MF Huber, C Kühnert, F Kronenwett, G Maier"
+    venue: "tm-Technisches Messen 90 (3), 154-166, 2023"
+    citations: 2
+    links:
+      pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/a778c4d8-a11b-4514-8b2b-e7a922a7c3fa/content"
+      journal: "https://www.degruyterbrill.com/document/doi/10.1515/teme-2022-0097/html"
+      doi: "https://doi.org/10.1515/teme-2022-0097"
+
+  - year: 2023
+    title: "Regression-based age prediction of plastic waste using hyperspectral imaging"
+    authors: "F Kronenwett, P Klingenberg, G Maier, T Längle, E Metzsch-Zilligen, J Beyerer"
+    venue: "International Conference on Optical Characterization of Materials (OCM), 2023"
+    citations: 1
+    links:
+      pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content"
+      journal: "https://doi.org/10.5445/KSP/1000155014"
+      doi: "https://doi.org/10.24406/publica-1181"
+
+  - year: 2021
+    title: "Developing a handheld NIR sensor for the detection of ripening in grapevine"
+    authors: "L Gebauer, J Krause, X Zheng, F Kronenwett, R Gruna, R Töpfe, A Kicherer"
+    venue: "International Conference on Optical Characterization of Materials (OCM), 2021"
+    citations: 1
+    links:
+      pdf: "https://core.ac.uk/download/pdf/478115291.pdf#page=85"
+      journal: "https://doi.org/10.5445/KSP/1000128686"
+
+  - year: 2025
+    title: "Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
+    authors: "L Roming, F Kronenwett, P Bäcker, J Josekutty, G Maier, T Längle"
+    venue: "Waste Management 209, 115175"
+    citations: 0
+    links:
+      pdf: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860/pdfft?md5=ece324cb51eebdc3e69dd3f08a4bce1d&pid=1-s2.0-S0956053X25005860-main.pdf"
+      journal: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860"
+      doi: "https://doi.org/10.1016/j.wasman.2025.115175"
+
+  - year: 2025
+    title: "Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models"
+    authors: "F Kronenwett, G Maier, T Längle"
+    venue: "IEEE 30th International Conference on Emerging Technologies and Factory Automation (ETFA), 2025"
+    citations: 0
+    links:
+      pdf: "https://arxiv.org/pdf/2507.22766"
+      journal: "https://ieeexplore.ieee.org/document/11205772"
+      doi: "https://doi.org/10.1109/ETFA65518.2025.11205772"
+
+  - year: 2025
+    title: "Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems"
+    authors: "F Kronenwett, R Lehmann, H Zheng, G Maier, T Längle, W Kar"
+    venue: "International Conference on Optical Characterization of Materials (OCM), 2025"
+    citations: 0
+    links:
+      pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/399899fd-53d2-4191-95b0-0665f16e5c65/content"
+      journal: "https://doi.org/10.5445/KSP/1000178356/v2"
+      doi: "https://doi.org/10.24406/publica-4530"
+
+  - year: 2024
+    title: "Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs"
+    authors: "F Lehnerer, L Roming, J Hock, F Kronenwett, G Maier, T Längle"
+    venue: "Recy & DepoTech-Konferenz, 2024"
+    citations: 0
+    links:
+      pdf: "https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/"
+      journal: "https://publica.fraunhofer.de/entities/publication/3d45a32e-c5fa-466c-a7fc-689ccf9d07c5"
+
+  - year: 2023
+    title: "KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung"
+    authors: "F Kronenwett, G Maier, H Schulte, N Tron, A Krähmer"
+    venue: "Tagung für Arznei-und Gewürzpflanzenforschung, 2023"
+    citations: 0
+    links:
+      pdf: "https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00054518/JKA_476_2023_4.pdf"
+      journal: "https://www.openagrar.de/receive/openagrar_mods_00089187"
+      doi: "https://doi.org/10.5073/20230821-134542-0"
+
+  - year: 2021
+    title: "Ripening detection in grapevine: development of a handheld NIR sensor"
+    authors: "L Gebauer, J Krause, X Zheng, F Kronenwett, R Gruna, R Töpfer, A Kicherer"
+    venue: "Young Scientists Meeting, 2021"
+    citations: 0
+    links:
+      pdf: "https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00042001/Berichte-JKI-213-32.pdf"
+      journal: "https://www.openagrar.de/receive/openagrar_mods_00074577"
+      doi: "https://doi.org/10.5073/20211001-083036"

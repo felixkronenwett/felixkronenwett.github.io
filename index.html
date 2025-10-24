@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,7 @@
             </nav>
             <img
               src="bild_fk.jpg"
-              alt="Profilbild"
+              alt="Profile photo"
               class="rounded-full size-10 object-cover"
             />
           </div>
@@ -49,18 +49,19 @@
             <div class="flex p-4 @container">
               <div class="flex w-full flex-col gap-4 items-center">
                 <div class="flex gap-4 flex-col items-center">
-                  <img src="bild_fk.jpg" alt="Profilbild von Felix Kronenwett" class="rounded-full min-h-32 w-32 h-32 object-cover" />
+                  <img src="bild_fk.jpg" alt="Profile photo of Felix Kronenwett" class="rounded-full min-h-32 w-32 h-32 object-cover" />
                   <div class="flex flex-col items-center justify-center">
-                    <p class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Felix Kronenwett</p>
-                    <p class="text-[#637588] text-base font-normal leading-normal text-center">Scientific employee at Fraunhofer IOSB</p>
+                    <p id="profile-name" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Felix Kronenwett</p>
+                    <p id="profile-title" class="text-[#637588] text-base font-normal leading-normal text-center">Research Associate at Fraunhofer IOSB</p>
                     <div style="height: 10px;"></div>
-                    <p class="text-[#637588] text-base font-normal leading-normal text-center">
+                    <p id="profile-bio" class="text-[#637588] text-base font-normal leading-normal text-center">
                       Specialized in signal processing, machine learning, computer vision, and hyperspectral imaging. I am currently a research associate at Fraunhofer IOSB in Karlsruhe in the Visual Inspection Systems (SPR) department working in the field of sensor-based sorting systems. My interests include probabilistic machine learning, deep learning based computer vision, real-time capable systems, and creating sustainable solutions for recycling and agriculture. Through my research, I strive to advance innovative sensor technologies and data-driven approaches for efficient industrial applications.
                     </p>
                   </div>
                 </div>
                 <div class="flex w-full max-w-[480px] gap-3 @[480px]:w-auto">
                   <a
+                    id="link-scholar"
                     href="https://scholar.google.com/citations?user=m-2NqOkAAAAJ&hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -77,6 +78,7 @@
                     />
                   </a>
                   <a
+                    id="link-orcid"
                     href="https://orcid.org/0009-0005-1321-4889"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -93,6 +95,7 @@
                     />
                   </a>
                   <a
+                    id="link-publica"
                     href="https://publica.fraunhofer.de/entities/person/61402c92-60c0-4e2d-813f-a7741f26b059/publications"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -107,7 +110,7 @@
                       viewBox="0 0 41.507 41.717"
                       style="filter: grayscale(1) brightness(0.9);"
                       role="img"
-                      aria-label="Fraunhofer-Logo"
+                      aria-label="Fraunhofer logo"
                     >
                       <g>
                         <path fill="#179c7d" d="M0 41.697C9.874 36.614 24.338 28.395 41.507 16.38V12.347C26.396 22.233 11.031 30.171 0 35.422v6.275z"/>
@@ -131,83 +134,15 @@
             <div style="height: 20px;"></div>
 
             <h2 id="experience" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 scroll-mt-20">Experience</h2>
-            <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
-              <div class="flex flex-col items-center gap-1 pt-3">
-                <div class="text-[#111418]" data-icon="TextHThree" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 76 66">
-                    <path d="M74,16H48v-6c0-1.1-0.9-2-2-2H30c-1.1,0-2,0.9-2,2v6H2c-1.1,0-2,0.9-2,2v48c0,1.1,0.9,2,2,2h72
-                    c1.1,0,2-0.9,2-2V18C76,16.9,75.1,16,74,16z M32,12h12v4H32V12z M72,64H4V44h28v5.9c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V44h28V64z
-                    M36,47.9v-12h4v12H36z M72,40H44v-6c0-1.1-0.9-2-2-2h-8c-1.1,0-2,0.9-2,2v6H4V20h68V40z"/>
-                  </svg>
-                </div>
-                <div class="w-[1.5px] bg-[#dce0e5] h-2 grow"></div>
-              </div>
-              <div class="flex flex-1 flex-col py-3">
-                <p class="text-[#111418] text-base font-medium leading-normal">Wissenschaftlicher Mitarbeiter</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">Fraunhofer IOSB, Karlsruhe, 2021 - present</p>
-              </div>
-              <div class="flex flex-col items-center gap-1 pb-3">
-                <div class="w-[1.5px] bg-[#dce0e5] h-2"></div>
-                <div class="text-[#111418]" data-icon="TextHThree" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 76 66">
-                    <path d="M74,16H48v-6c0-1.1-0.9-2-2-2H30c-1.1,0-2,0.9-2,2v6H2c-1.1,0-2,0.9-2,2v48c0,1.1,0.9,2,2,2h72
-                    c1.1,0,2-0.9,2-2V18C76,16.9,75.1,16,74,16z M32,12h12v4H32V12z M72,64H4V44h28v5.9c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V44h28V64z
-                    M36,47.9v-12h4v12H36z M72,40H44v-6c0-1.1-0.9-2-2-2h-8c-1.1,0-2,0.9-2,2v6H4V20h68V40z"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="flex flex-1 flex-col py-3">
-                <p class="text-[#111418] text-base font-medium leading-normal">Studentische Hilfskraft</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">Fraunhofer IOSB, Karlsruhe, 2020 - 2021</p>
-              </div>
-              <div class="flex flex-col items-center gap-1 pb-3">
-                <div class="w-[1.5px] bg-[#dce0e5] h-2"></div>
-                <div class="text-[#111418]" data-icon="TextHThree" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 76 66">
-                    <path d="M74,16H48v-6c0-1.1-0.9-2-2-2H30c-1.1,0-2,0.9-2,2v6H2c-1.1,0-2,0.9-2,2v48c0,1.1,0.9,2,2,2h72
-                    c1.1,0,2-0.9,2-2V18C76,16.9,75.1,16,74,16z M32,12h12v4H32V12z M72,64H4V44h28v5.9c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2V44h28V64z
-                    M36,47.9v-12h4v12H36z M72,40H44v-6c0-1.1-0.9-2-2-2h-8c-1.1,0-2,0.9-2,2v6H4V20h68V40z"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="flex flex-1 flex-col py-3">
-                <p class="text-[#111418] text-base font-medium leading-normal">Werkstudent / Duales Studium</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">Stöber Antriebstechnik GmbH + Co. KG, Pforzheim, 2014 - 2017</p>
-              </div>
+            <div id="experience-list" class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+              <!-- Dynamically filled -->
             </div>
 
             <div style="height: 20px;"></div>
 
             <h2 id="education" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 scroll-mt-20">Education</h2>
-            <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
-              <div class="flex flex-col items-center gap-1 pt-3">
-                <div class="text-[#111418]" data-icon="GraduationCap" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="w-[1.5px] bg-[#dce0e5] h-2 grow"></div>
-              </div>
-              <div class="flex flex-1 flex-col py-3">
-                <p class="text-[#111418] text-base font-medium leading-normal">Master of Science in Elektrotechnik und Informationstechnik</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">Karlsruher Institut für Technologie, 2017 - 2020</p>
-              </div>
-              <div class="flex flex-col items-center gap-1 pb-3">
-                <div class="w-[1.5px] bg-[#dce0e5] h-2"></div>
-                <div class="text-[#111418]" data-icon="GraduationCap" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="flex flex-1 flex-col py-3">
-                <p class="text-[#111418] text-base font-medium leading-normal">Bachelor of Engineering in Elektrotechnik</p>
-                <p class="text-[#637588] text-base font-normal leading-normal">DHBW Karlsruhe, 2014 - 2017</p>
-              </div>
+            <div id="education-list" class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+              <!-- Dynamically filled -->
             </div>
 
             <div style="height: 20px;"></div>
@@ -229,343 +164,42 @@
                     </svg>
                   </div>
                   <input
-                    placeholder="Suche nach Titel oder Autor"
+                    placeholder="Search by title or author"
                     class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-full placeholder:text-[#637588] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
                     value=""
-                    aria-label="Publikationen suchen"
+                    aria-label="Search publications"
                   />
                 </div>
               </label>
             </div>
             <div class="flex gap-3 px-4 py-3 items-center">
-              <label for="sort-publications" class="text-[#637588] text-base font-normal">Sortieren nach:</label>
+              <label for="sort-publications" class="text-[#637588] text-base font-normal">Sort by:</label>
               <select id="sort-publications" class="form-select rounded-lg px-7 py-1 border bg-[#f0f2f4] text-[#111418]">
-                <option value="citations-desc">citations</option>
-                <option value="year-desc">year (desc.)</option>
-                <option value="year-asc">year (asc.)</option>
+                <option value="citations-desc">Citations</option>
+                <option value="year-desc">Year (desc.)</option>
+                <option value="year-asc">Year (asc.)</option>
                 <option value="title-asc">(A–Z)</option>
                 <option value="title-desc">(Z–A)</option>
               </select>
             </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2024"
-              data-title="Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
-              data-citations="12">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle (2024)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Waste Management & Research 42 (9), 788-796
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://journals.sagepub.com/doi/full/10.1177/0734242X241231410" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.1177/0734242X241231410" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
+            <div id="publications-list" class="px-0">
+              <!-- Dynamically filled -->
             </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2022"
-              data-title="Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning"
-              data-citations="3">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle (2022)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Recy & DepoTech-Konferenz 2022
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2024"
-              data-title="Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
-              data-citations="2">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Maier, G., Längle, T. (2024)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  10th Sensor-Based Sorting & Control 2024, 45
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/465d1b30-02df-4ef9-a5bd-8aa453a695a8/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://doi.org/10.2370/9783844094138" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.24406/h-464294" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2023"
-              data-title="Explainable AI for sensor-based sorting systems"
-              data-citations="2">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Explainable AI for sensor-based sorting systems
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Anneken, M., Veerappa, M., Huber, M. F., Kühnert, C., Kronenwett, F., Maier, G. (2023)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  tm-Technisches Messen 90 (3), 154-166
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/a778c4d8-a11b-4514-8b2b-e7a922a7c3fa/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://www.degruyterbrill.com/document/doi/10.1515/teme-2022-0097/html" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.1515/teme-2022-0097" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2023"
-              data-title="Regression-based age prediction of plastic waste using hyperspectral imaging"
-              data-citations="1">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Regression-based age prediction of plastic waste using hyperspectral imaging
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Klingenberg, P., Maier, G., Längle, T., Metzsch-Zilligen, E., Beyerer, J. (2023)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  OCM 2023-6th International Conference on Optical Characterization of Materials
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://doi.org/10.5445/KSP/1000155014" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.24406/publica-1181" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2021"
-              data-title="Developing a handheld NIR sensor for the detection of ripening in grapevine"
-              data-citations="1">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Developing a handheld NIR sensor for the detection of ripening in grapevine
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., Kicherer, A. (2021)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  OCM 2021-5th International Conference on Optical Characterization of Materials
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://core.ac.uk/download/pdf/478115291.pdf#page=85" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://doi.org/10.5445/KSP/1000128686" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2025"
-              data-title="Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Maier, G., Längle, T. (2025)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  arXiv preprint arXiv:2507.22766
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://arxiv.org/pdf/2507.22766" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://arxiv.org/abs/2507.22766" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://arxiv.org/abs/2507.22766" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2025"
-              data-title="Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Lehmann, R., Zheng, H., Maier, G., Längle, T., Karl, W. (2025)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  OCM 2025-7th International Conference on Optical Characterization of Materials
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://publica-rest.fraunhofer.de/server/api/core/bitstreams/399899fd-53d2-4191-95b0-0665f16e5c65/content" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://doi.org/10.5445/KSP/1000178356/v2" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.24406/publica-4530" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2024"
-              data-title="Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Lehnerer, F., Roming, L., Hock, J., Kronenwett, F., Maier, G., Längle, T. (2024)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Recy & DepoTech-Konferenz 2024
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://publica.fraunhofer.de/entities/publication/3d45a32e-c5fa-466c-a7fc-689ccf9d07c5" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2023"
-              data-title="KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Kronenwett, F., Maier, G., Schulte, H., Tron, N., Krähmer, A. (2023)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  9. Tagung für Arznei-und Gewürzpflanzenforschung
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00054518/JKA_476_2023_4.pdf" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://www.openagrar.de/receive/openagrar_mods_00089187" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.5073/20230821-134542-0" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2021"
-              data-title="Ripening detection in grapevine: development of a handheld NIR sensor"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Ripening detection in grapevine: development of a handheld NIR sensor
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Gebauer, L., Krause, J., Zheng, X., Kronenwett, F., Gruna, R., Töpfer, R., Kicherer, A. (2021)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  13th Young Scientists Meeting 2021, 32
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00042001/Berichte-JKI-213-32.pdf" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-red-400 hover:text-white active:bg-red-500">PDF</a>
-                  <a href="https://www.openagrar.de/receive/openagrar_mods_00074577" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                  <a href="https://doi.org/10.5073/20211001-083036" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-green-400 hover:text-white active:bg-green-500">DOI</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex gap-4 bg-white px-4 py-3 publication-entry"
-              data-year="2025"
-              data-title="Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
-              data-citations="0">
-              <!--<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]"></div>-->
-              <div class="flex flex-1 flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Roming, L., Kronenwett, F., Bäcker, P., Josekutty, J., Maier, G., Längle, T. (2025)
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Available at SSRN 5365109
-                </p>
-                <div class="flex gap-2 mt-2">
-                  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5365109" target="_blank" class="bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-blue-400 hover:text-white active:bg-blue-500">Journal</a>
-                </div>
-              </div>
-            </div>
-
-            <script>
-              document.querySelector('input[placeholder="Suche nach Titel oder Autor"]').addEventListener('input', function(e) {
-                const query = e.target.value.toLowerCase();
-                document.querySelectorAll('.publication-entry').forEach(function(entry) {
-                  const text = entry.innerText.toLowerCase();
-                  entry.style.display = text.includes(query) ? '' : 'none';
-                });
-              });
-            </script>
-
-            <script>
-              function getYear(entry) {
-                return parseInt(entry.getAttribute('data-year'), 10) || 0;
-              }
-              function getTitle(entry) {
-                return entry.getAttribute('data-title')?.toLowerCase() || '';
-              }
-              function getCitations(entry) {
-                return parseInt(entry.getAttribute('data-citations'), 10) || 0;
-              }
-              document.getElementById('sort-publications').addEventListener('change', function(e) {
-                const sortVal = e.target.value;
-                const container = document.querySelector('.layout-content-container');
-                const pubs = Array.from(container.querySelectorAll('.publication-entry'));
-                pubs.sort((a, b) => {
-                  if (sortVal === 'year-desc') return getYear(b) - getYear(a);
-                  if (sortVal === 'year-asc') return getYear(a) - getYear(b);
-                  if (sortVal === 'title-asc') return getTitle(a).localeCompare(getTitle(b));
-                  if (sortVal === 'title-desc') return getTitle(b).localeCompare(getTitle(a));
-                  if (sortVal === 'citations-desc') return getCitations(b) - getCitations(a);
-                  return 0;
-                });
-                pubs.forEach(pub => container.appendChild(pub));
-              });
-            </script>
-
           </div>
         </div>
 
         <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <p class="text-[#637588] text-base font-normal leading-normal">© 2025 Felix Kronenwett. Alle Rechte vorbehalten.</p>
+              <p class="text-[#637588] text-base font-normal leading-normal">© 2025 Felix Kronenwett. All rights reserved.</p>
             </footer>
           </div>
         </footer>
       </div>
     </div>
+
+    <!-- YAML parser and dynamic renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="content.js"></script>
   </body>
 </html>
