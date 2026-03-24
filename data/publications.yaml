@@ -3,7 +3,7 @@ items:
     title: "Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
     authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
     venue: "Waste Management & Research 42 (9), 788-796, 2024"
-    citations: 11
+    citations: 14
     links:
       pdf: "https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410"
       journal: "https://journals.sagepub.com/doi/full/10.1177/0734242X241231410"
@@ -22,7 +22,7 @@ items:
     title: "Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
     authors: "F Kronenwett, G Maier, T Längle"
     venue: "Sensor-Based Sorting & Control, 2024"
-    citations: 2
+    citations: 3
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/465d1b30-02df-4ef9-a5bd-8aa453a695a8/content"
       journal: "https://doi.org/10.2370/9783844094138"

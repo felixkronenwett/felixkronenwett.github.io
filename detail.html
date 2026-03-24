@@ -26,11 +26,18 @@
       #detail-content p { margin-bottom: 0.85em; }
       #detail-content h2 { margin-top: 1.75em; }
       #detail-content h3 { margin-top: 1.25em; }
-      /* MathJax display math centering */
-      #detail-content .MathJax_Display,
-      #detail-content mjx-container[display="true"] {
-        overflow-x: auto;
+      /* MathJax display math – no scrollbar, scale down on small screens */
+      #detail-content mjx-container[display="true"],
+      #detail-content .MathJax_Display {
+        overflow-x: visible;
+        overflow-y: visible;
         margin: 1.1em 0;
+        max-width: 100%;
+      }
+      #detail-content mjx-container[display="true"] > svg,
+      #detail-content mjx-container[display="true"] > mjx-math {
+        max-width: 100%;
+        font-size: clamp(0.7em, 2.5vw, 1em);
       }
     </style>
     <script>
