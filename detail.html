@@ -26,18 +26,26 @@
       #detail-content p { margin-bottom: 0.85em; }
       #detail-content h2 { margin-top: 1.75em; }
       #detail-content h3 { margin-top: 1.25em; }
-      /* MathJax display math – no scrollbar, scale down on small screens */
+      /* MathJax display math: scrollable but scrollbar hidden, content selectable */
       #detail-content mjx-container[display="true"],
       #detail-content .MathJax_Display {
-        overflow-x: visible;
+        display: block;
+        overflow-x: auto;
         overflow-y: visible;
-        margin: 1.1em 0;
-        max-width: 100%;
+        margin: 1.25em 0;
+        padding: 0.5em 0;
+        /* Hide scrollbar – Chrome/Safari */
+        scrollbar-width: none;       /* Firefox */
+        -ms-overflow-style: none;    /* IE/Edge */
       }
-      #detail-content mjx-container[display="true"] > svg,
-      #detail-content mjx-container[display="true"] > mjx-math {
-        max-width: 100%;
-        font-size: clamp(0.7em, 2.5vw, 1em);
+      #detail-content mjx-container[display="true"]::-webkit-scrollbar,
+      #detail-content .MathJax_Display::-webkit-scrollbar {
+        display: none;               /* Chrome, Safari, Opera */
+      }
+      /* Inline math: never breaks across lines */
+      #detail-content mjx-container[display="false"] {
+        display: inline;
+        white-space: nowrap;
       }
     </style>
     <script>
