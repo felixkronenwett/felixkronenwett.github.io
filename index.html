@@ -36,11 +36,13 @@
               <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#education">Education</a>
               <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#publications">Publications</a>
             </nav>
-            <img
-              src="bild_fk.jpg"
-              alt="Profile photo"
-              class="rounded-full size-10 object-cover"
-            />
+            <a href="projects.html" class="rounded-full size-10 overflow-hidden" aria-label="Projects & Blog">
+              <img
+                src="bild_fk.jpg"
+                alt="Profile photo"
+                class="w-full h-full object-cover"
+              />
+            </a>
           </div>
         </header>
 
@@ -188,11 +190,12 @@
           </div>
         </div>
 
-        <footer class="flex justify-center">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <p class="text-[#637588] text-base font-normal leading-normal">© 2025 Felix Kronenwett. All rights reserved.</p>
-            </footer>
+        <!-- Einheitlicher, zentrierter Footer (sticky am Seitenende) -->
+        <footer class="mt-auto">
+          <div class="px-5 py-10">
+            <p class="text-center text-[#637588] text-base">
+              © 2025 Felix Kronenwett. All rights reserved.
+            </p>
           </div>
         </footer>
       </div>
