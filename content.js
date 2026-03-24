@@ -65,30 +65,66 @@
     return a;
   }
 
-  // Single publication entry
+  // Detect venue type: 'journal' or 'conference'
+  function venueType(venue) {
+    if (!venue) return 'other';
+    const v = venue.toLowerCase();
+    // Conference keywords
+    if (/conference|workshop|symposium|proceedings|konferenz|meeting|congress|etfa|ocm|acc|cirp|recy|depotech/i.test(v)) return 'conference';
+    // Journal keywords
+    if (/journal|transactions|magazine|review|research|letters|science|management|measurement|messen|access|technology|engineering/i.test(v)) return 'journal';
+    return 'other';
+  }
+
+  // Single publication entry – year badge on left, content on right
   function createPublicationEntry(p) {
     const wrapper = document.createElement('div');
-    wrapper.className = 'flex gap-4 bg-white px-4 py-3 publication-entry';
+    wrapper.className = 'flex gap-0 bg-white px-4 py-3 publication-entry items-start';
     wrapper.dataset.year = String(p.year || '');
     wrapper.dataset.title = String(p.title || '');
     wrapper.dataset.citations = String(p.citations || 0);
+    wrapper.dataset.venuetype = venueType(p.venue || '');
 
-    const content = document.createElement('div');
-    content.className = 'flex flex-1 flex-col justify-center';
-    content.innerHTML = `
+    // --- Year column (left) ---
+    const yearCol = document.createElement('div');
+    yearCol.className = 'flex-shrink-0 w-12 pt-0.5 mr-4 text-right';
+    const yearSpan = document.createElement('span');
+    yearSpan.className = 'text-[#637588] text-sm font-semibold tabular-nums';
+    yearSpan.textContent = p.year || '';
+    yearCol.appendChild(yearSpan);
+
+    // --- Content column (right) ---
+    const col = document.createElement('div');
+    col.className = 'flex flex-1 flex-col justify-center min-w-0';
+    col.innerHTML = `
       <p class="text-[#111418] text-base font-medium leading-normal">${p.title}</p>
       <p class="text-[#637588] text-sm font-normal leading-normal">${p.authors}</p>
-      <p class="text-[#637588] text-sm font-normal leading-normal">${p.venue || ''}</p>
+      <p class="text-[#637588] text-sm font-normal leading-normal italic">${p.venue || ''}</p>
     `;
 
     const linksRow = document.createElement('div');
-    linksRow.className = 'flex gap-2 mt-2';
+    linksRow.className = 'flex flex-wrap items-center gap-2 mt-2';
     if (p.links?.pdf) linksRow.appendChild(createLink(p.links.pdf, 'PDF'));
     if (p.links?.journal) linksRow.appendChild(createLink(p.links.journal, 'Journal'));
     if (p.links?.doi) linksRow.appendChild(createLink(p.links.doi, 'DOI'));
-    content.appendChild(linksRow);
 
-    wrapper.appendChild(content);
+    // Citation badge with color tiers
+    const citations = parseInt(p.citations || 0, 10);
+    const citeBadge = document.createElement('span');
+    citeBadge.title = citations + ' citation' + (citations !== 1 ? 's' : '');
+    citeBadge.setAttribute('aria-label', citations + ' citations');
+    const tierClass =
+      citations >= 10 ? 'bg-[#d1fae5] text-[#065f46]' :
+      citations >= 5  ? 'bg-[#dbeafe] text-[#1e40af]' :
+      citations >= 1  ? 'bg-[#e0e7ff] text-[#3730a3]' :
+                        'bg-[#f0f2f4] text-[#637588]';
+    citeBadge.className = 'inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full ' + tierClass;
+    citeBadge.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L160,123.31V216a8,8,0,0,1-16,0V123.31l-42.34,42.35a8,8,0,0,1-11.32-11.32l56-56a8,8,0,0,1,11.32,0l56,56A8,8,0,0,1,213.66,165.66ZM48,88H80V56a8,8,0,0,1,16,0V88h32a8,8,0,0,1,0,16H96v32a8,8,0,0,1-16,0V104H48a8,8,0,0,1,0-16Z"/></svg>' + citations + ' cited';
+    linksRow.appendChild(citeBadge);
+
+    col.appendChild(linksRow);
+    wrapper.appendChild(yearCol);
+    wrapper.appendChild(col);
     return wrapper;
   }
 
@@ -168,24 +204,67 @@
       (pubs.items || []).forEach(p => pubsContainer.appendChild(createPublicationEntry(p)));
     }
 
-    // Search (supports DE and EN selectors)
-    const searchInput =
-      document.querySelector('input[aria-label="Publikationen suchen"], input[aria-label="Search publications"], input[placeholder="Suche nach Titel oder Autor"], input[placeholder="Search by title or author"]');
-    if (searchInput && pubsContainer) {
-      searchInput.addEventListener('input', e => {
-        const q = (e.target.value || '').toLowerCase();
-        pubsContainer.querySelectorAll('.publication-entry').forEach(entry => {
-          const text = entry.innerText.toLowerCase();
-          entry.style.display = text.includes(q) ? '' : 'none';
-        });
+    // Active filter state
+    let activeFilter = 'all';
+
+    // Helper: apply search + filter + sort together
+    function applyFilters() {
+      const q = (searchInput ? searchInput.value : '').toLowerCase();
+      pubsContainer.querySelectorAll('.publication-entry').forEach(entry => {
+        const text = entry.innerText.toLowerCase();
+        const vtype = entry.dataset.venuetype || 'other';
+        const matchSearch = !q || text.includes(q);
+        const matchFilter =
+          activeFilter === 'all' ||
+          (activeFilter === 'journal' && vtype === 'journal') ||
+          (activeFilter === 'conference' && vtype === 'conference');
+        entry.style.display = (matchSearch && matchFilter) ? '' : 'none';
       });
     }
 
-    // Sorting
+    // Search
+    const searchInput =
+      document.querySelector('input[aria-label="Publikationen suchen"], input[aria-label="Search publications"], input[placeholder="Suche nach Titel oder Autor"], input[placeholder="Search by title or author"]');
+    if (searchInput && pubsContainer) {
+      searchInput.addEventListener('input', () => applyFilters());
+    }
+
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.pub-filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeFilter = btn.dataset.filter || 'all';
+        filterBtns.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle('bg-[#111418]', isActive);
+          b.classList.toggle('text-white', isActive);
+          b.classList.toggle('bg-[#f0f2f4]', !isActive);
+          b.classList.toggle('text-[#111418]', !isActive);
+          b.classList.toggle('active-filter', isActive);
+        });
+        applyFilters();
+      });
+    });
+
+    // Sorting + arrow direction indicator
     const sortSel = document.getElementById('sort-publications');
+    const sortArrow = document.getElementById('sort-arrow-icon');
+    function updateArrow(val) {
+      if (!sortArrow) return;
+      // down arrow for desc/default, up arrow for asc
+      const isAsc = val === 'year-asc' || val === 'title-asc';
+      sortArrow.innerHTML = isAsc
+        ? '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M42.34,90.34a8,8,0,0,1,11.32,0L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,42.34,90.34Z"/></svg>'
+        : '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"/></svg>';
+    }
     if (sortSel && pubsContainer) {
-      sortSel.addEventListener('change', e => sortEntries(pubsContainer, e.target.value));
+      sortSel.addEventListener('change', e => {
+        sortEntries(pubsContainer, e.target.value);
+        updateArrow(e.target.value);
+        applyFilters();
+      });
       sortEntries(pubsContainer, sortSel.value);
+      updateArrow(sortSel.value);
     }
   } catch (err) {
     console.error('Failed to load data:', err);

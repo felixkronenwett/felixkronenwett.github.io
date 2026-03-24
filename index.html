@@ -16,6 +16,9 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
       html { scroll-behavior: smooth; }
+      select, input, button, textarea {
+        font-family: Newsreader, "Noto Sans", sans-serif;
+      }
     </style>
   </head>
   <body>
@@ -30,11 +33,11 @@
             <h2 class="text-[#111418] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em]">Felix Kronenwett</h2>
           </a>
           <div class="flex flex-1 justify-end gap-6 md:gap-8">
-            <nav class="flex items-center gap-6 md:gap-9">
-              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#top">Home</a>
-              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#experience">Experience</a>
-              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#education">Education</a>
-              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal" href="#publications">Publications</a>
+            <nav class="hidden md:flex items-center gap-6 md:gap-9">
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="#top">Home</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="#experience">Experience</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="#education">Education</a>
+              <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="#publications">Publications</a>
             </nav>
             <a href="projects.html" class="rounded-full size-10 overflow-hidden" aria-label="Projects & Blog">
               <img
@@ -71,13 +74,7 @@
                     class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#f0f2f4] hover:bg-[#e5e7eb]"
                     aria-label="Google Scholar"
                   >
-                    <img
-                      width="24"
-                      height="24"
-                      alt="Google Scholar logo"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png?20200110094142"
-                      style="filter: grayscale(1) brightness(0.7);"
-                    />
+                    <img src="Google_Scholar_logo.svg" alt="Google Scholar" width="22" height="22" style="filter: grayscale(1) brightness(0.6);" />
                   </a>
                   <a
                     id="link-orcid"
@@ -88,13 +85,7 @@
                     class="flex items-center justify-center w-10 h-10 rounded-lg bg-[#f0f2f4] hover:bg-[#e5e7eb]"
                     aria-label="ORCID"
                   >
-                    <img
-                      width="24"
-                      height="24"
-                      alt="ORCID logo"
-                      src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"
-                      style="filter: grayscale(1) brightness(0.7);"
-                    />
+                    <img src="ORCID_iD.svg" alt="ORCID" width="22" height="22" style="filter: grayscale(1) brightness(0.6);" />
                   </a>
                   <a
                     id="link-publica"
@@ -174,15 +165,30 @@
                 </div>
               </label>
             </div>
-            <div class="flex gap-3 px-4 py-3 items-center">
-              <label for="sort-publications" class="text-[#637588] text-base font-normal">Sort by:</label>
-              <select id="sort-publications" class="form-select rounded-lg px-7 py-1 border bg-[#f0f2f4] text-[#111418]">
-                <option value="citations-desc">Citations</option>
-                <option value="year-desc">Year (desc.)</option>
-                <option value="year-asc">Year (asc.)</option>
-                <option value="title-asc">(A–Z)</option>
-                <option value="title-desc">(Z–A)</option>
-              </select>
+            <!-- Filter buttons: All / Journals / Conferences -->
+            <div class="flex gap-2 px-4 pb-2 pt-1" id="pub-filter-btns" role="group" aria-label="Filter publications">
+              <button data-filter="all"         class="pub-filter-btn active-filter text-sm px-3 py-1 rounded-full bg-[#111418] text-white transition-colors">All</button>
+              <button data-filter="journal"     class="pub-filter-btn text-sm px-3 py-1 rounded-full bg-[#f0f2f4] text-[#111418] hover:bg-[#e5e7eb] transition-colors">Journals</button>
+              <button data-filter="conference"  class="pub-filter-btn text-sm px-3 py-1 rounded-full bg-[#f0f2f4] text-[#111418] hover:bg-[#e5e7eb] transition-colors">Conferences</button>
+            </div>
+            <!-- Sort row with styled custom select -->
+            <div class="flex gap-3 px-4 py-2 items-center">
+              <span class="text-[#637588] text-sm font-normal">Sort by:</span>
+              <div class="relative inline-flex items-center">
+                <select id="sort-publications"
+                  class="appearance-none bg-[#f0f2f4] text-[#111418] text-sm rounded-lg pl-3 pr-8 py-1.5 border-none focus:outline-none cursor-pointer">
+                  <option value="citations-desc">Citations &#8595;</option>
+                  <option value="year-desc">Year &#8595;</option>
+                  <option value="year-asc">Year &#8593;</option>
+                  <option value="title-asc">A &#8594; Z</option>
+                  <option value="title-desc">Z &#8594; A</option>
+                </select>
+                <span id="sort-arrow-icon" class="pointer-events-none absolute right-2 text-[#637588]" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"/>
+                  </svg>
+                </span>
+              </div>
             </div>
             <div id="publications-list" class="px-0">
               <!-- Dynamically filled -->
@@ -204,5 +210,6 @@
     <!-- YAML parser and dynamic renderer -->
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <script src="content.js"></script>
+    <script src="enhancements.js"></script>
   </body>
 </html>

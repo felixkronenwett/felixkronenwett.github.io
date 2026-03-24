@@ -1,0 +1,10 @@
+items:
+
+  - type: blog
+
+    slug: bayesian-neural-networks
+    title: "Blog: Bayesian Neural Networks – Uncertainty-Aware Deep Learning"
+    date: 2026-01-15
+    summary: "Eine Einführung in Bayesianische Neuronale Netze: Theoretische Grundlagen, Sampling-Algorithmen (HMC, SGHMC), Variational Inference (BBB) und praktische Methoden wie MC-Dropout und SWAG."
+    thumb: "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1200&auto=format&fit=crop"
+    md: "content/blog/bnn.md"

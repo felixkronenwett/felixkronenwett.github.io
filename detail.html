@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Newsreader:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
+    />
+
+    <title>Blog – Felix Kronenwett</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      html { scroll-behavior: smooth; }
+      /* Ensure all form elements inherit the page font */
+      select, input, button, textarea {
+        font-family: Newsreader, "Noto Sans", sans-serif;
+      }
+      /* Prose spacing for article content */
+      #detail-content p { margin-bottom: 0.85em; }
+      #detail-content h2 { margin-top: 1.75em; }
+      #detail-content h3 { margin-top: 1.25em; }
+      /* MathJax display math centering */
+      #detail-content .MathJax_Display,
+      #detail-content mjx-container[display="true"] {
+        overflow-x: auto;
+        margin: 1.1em 0;
+      }
+    </style>
+    <script>
+      // MathJax-Konfiguration für $...$ und $$...$$
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']]
+        },
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+  <body>
+    <div class="relative flex min-h-screen flex-col bg-white overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+
+      <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-6 md:px-10 h-16 bg-white/95 backdrop-blur shadow-sm">
+        <a href="index.html#top" class="flex items-center gap-4 text-[#111418]">
+          <div class="size-7">
+            <img src="logo.svg" alt="Logo" class="w-full h-full" />
+          </div>
+          <h2 class="text-[#111418] text-[20px] md:text-[22px] font-bold leading-tight tracking-[-0.015em]">Felix Kronenwett</h2>
+        </a>
+        <div class="flex flex-1 justify-end gap-6 md:gap-8">
+          <nav class="hidden md:flex items-center gap-6 md:gap-9">
+            <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="index.html#top">Home</a>
+            <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="index.html#experience">Experience</a>
+            <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="index.html#education">Education</a>
+            <a class="text-[#111418] text-[16px] md:text-[18px] font-medium leading-normal hover:text-[#637588] transition-colors" href="index.html#publications">Publications</a>
+          </nav>
+          <a href="projects.html" class="rounded-full size-10 overflow-hidden" aria-label="Projects & Blog">
+            <img src="bild_fk.jpg" alt="Projects & Blog" class="w-full h-full object-cover" />
+          </a>
+        </div>
+      </header>
+
+      <!-- Fixer Zurück-Button, immer sichtbar -->
+      <button
+        onclick="history.back()"
+        class="fixed left-5 md:left-8 top-[84px] z-50 rounded-lg bg-[#f0f2f4] hover:bg-[#e7ebf3] active:scale-95 text-[#111418] px-3 py-1.5 text-sm shadow transition-all duration-150"
+        aria-label="Zurück"
+      >
+        ← Zurück
+      </button>
+
+      <!-- Hauptbereich mit gleicher Breite wie index.html -->
+      <main class="px-5 sm:px-10 lg:px-20 flex-1 pt-20 pb-10">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1 mx-auto">
+          <h1 id="detail-title" class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em]"></h1>
+          <p id="detail-meta" class="text-[#637588] text-sm font-normal leading-normal mt-1"></p>
+
+          <div id="detail-cover" class="rounded-lg mt-4 bg-cover bg-center w-full h-48" style="display:none;"></div>
+
+          <article id="detail-content" class="mt-6"></article>
+        </div>
+      </main>
+
+      <!-- Einheitlicher, zentrierter Footer -->
+      <footer class="mt-auto">
+        <div class="px-5 py-10">
+          <p class="text-center text-[#637588] text-base">
+            © 2025 Felix Kronenwett. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+    <script src="detail.js"></script>
+    <script src="enhancements.js"></script>
+  </body>
+</html>
