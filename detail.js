@@ -126,19 +126,12 @@
     contentEl.innerHTML = safeHtml;
     applyIndexStyles(contentEl);
 
-    // MathJax für Formeln ausführen (after DOM is set)
-    if (window.MathJax) {
-      // If MathJax already loaded, typeset immediately; otherwise wait for it
-      if (window.MathJax.typesetPromise) {
-        await window.MathJax.typesetPromise([contentEl]);
-      } else {
-        window.MathJax.startup = window.MathJax.startup || {};
-        const prev = window.MathJax.startup.ready;
-        window.MathJax.startup.ready = () => {
-          if (prev) prev();
-          window.MathJax.typesetPromise([contentEl]);
-        };
-      }
+    // MathJax: wait for the ready-promise, then typeset
+    if (window._mathJaxReady) {
+      await window._mathJaxReady;
+      await window.MathJax.typesetPromise([contentEl]);
+    } else if (window.MathJax && window.MathJax.typesetPromise) {
+      await window.MathJax.typesetPromise([contentEl]);
     }
   } catch (err) {
     console.error(err);

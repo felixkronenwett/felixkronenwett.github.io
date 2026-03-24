@@ -34,16 +34,29 @@
       }
     </style>
     <script>
-      // MathJax-Konfiguration für $...$ und $$...$$
+      // MathJax config – must be set BEFORE MathJax loads
+      window._mathJaxReady = new Promise(function(resolve) {
+        window._mathJaxReadyResolve = resolve;
+      });
       window.MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$','$$'], ['\\[','\\]']]
+          inlineMath: [['$', '$'], ['\(', '\)']],
+          displayMath: [['$$','$$'], ['\[','\]']]
         },
-        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+        options: {
+          skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+        },
+        startup: {
+          ready: function() {
+            MathJax.startup.defaultReady();
+            MathJax.startup.promise.then(function() {
+              if (window._mathJaxReadyResolve) window._mathJaxReadyResolve();
+            });
+          }
+        }
       };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   </head>
   <body>
     <div class="relative flex min-h-screen flex-col bg-white overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
