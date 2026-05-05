@@ -3,7 +3,7 @@ items:
     title: "Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
     authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
     venue: "Waste Management & Research 42 (9), 788-796, 2024"
-    citations: 14
+    citations: 15
     links:
       pdf: "https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410"
       journal: "https://journals.sagepub.com/doi/full/10.1177/0734242X241231410"
@@ -22,7 +22,7 @@ items:
     title: "Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
     authors: "F Kronenwett, G Maier, T Längle"
     venue: "Sensor-Based Sorting & Control, 2024"
-    citations: 3
+    citations: 2
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/465d1b30-02df-4ef9-a5bd-8aa453a695a8/content"
       journal: "https://doi.org/10.2370/9783844094138"
@@ -32,7 +32,7 @@ items:
     title: "Explainable AI for sensor-based sorting systems"
     authors: "M Anneken, M Veerappa, MF Huber, C Kühnert, F Kronenwett, G Maier"
     venue: "tm-Technisches Messen 90 (3), 154-166, 2023"
-    citations: 2
+    citations: 3
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/a778c4d8-a11b-4514-8b2b-e7a922a7c3fa/content"
       journal: "https://www.degruyterbrill.com/document/doi/10.1515/teme-2022-0097/html"
@@ -42,7 +42,7 @@ items:
     title: "Regression-based age prediction of plastic waste using hyperspectral imaging"
     authors: "F Kronenwett, P Klingenberg, G Maier, T Längle, E Metzsch-Zilligen, J Beyerer"
     venue: "International Conference on Optical Characterization of Materials (OCM), 2023"
-    citations: 1
+    citations: 2
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content"
       journal: "https://doi.org/10.5445/KSP/1000155014"
@@ -61,7 +61,7 @@ items:
     title: "Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
     authors: "L Roming, F Kronenwett, P Bäcker, J Josekutty, G Maier, T Längle"
     venue: "Waste Management 209, 115175"
-    citations: 0
+    citations: 1
     links:
       pdf: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860/pdfft?md5=ece324cb51eebdc3e69dd3f08a4bce1d&pid=1-s2.0-S0956053X25005860-main.pdf"
       journal: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860"
@@ -71,7 +71,7 @@ items:
     title: "Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models"
     authors: "F Kronenwett, G Maier, T Längle"
     venue: "IEEE 30th International Conference on Emerging Technologies and Factory Automation (ETFA), 2025"
-    citations: 0
+    citations: 2
     links:
       pdf: "https://arxiv.org/pdf/2507.22766"
       journal: "https://ieeexplore.ieee.org/document/11205772"
