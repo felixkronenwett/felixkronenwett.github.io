@@ -3,7 +3,7 @@ items:
     title: "Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
     authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
     venue: "Waste Management & Research 42 (9), 788-796, 2024"
-    citations: 15
+    citations: 19
     links:
       pdf: "https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410"
       journal: "https://journals.sagepub.com/doi/full/10.1177/0734242X241231410"
@@ -42,7 +42,7 @@ items:
     title: "Regression-based age prediction of plastic waste using hyperspectral imaging"
     authors: "F Kronenwett, P Klingenberg, G Maier, T Längle, E Metzsch-Zilligen, J Beyerer"
     venue: "International Conference on Optical Characterization of Materials (OCM), 2023"
-    citations: 2
+    citations: 3
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content"
       journal: "https://doi.org/10.5445/KSP/1000155014"
@@ -61,7 +61,7 @@ items:
     title: "Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
     authors: "L Roming, F Kronenwett, P Bäcker, J Josekutty, G Maier, T Längle"
     venue: "Waste Management 209, 115175"
-    citations: 1
+    citations: 2
     links:
       pdf: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860/pdfft?md5=ece324cb51eebdc3e69dd3f08a4bce1d&pid=1-s2.0-S0956053X25005860-main.pdf"
       journal: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860"
