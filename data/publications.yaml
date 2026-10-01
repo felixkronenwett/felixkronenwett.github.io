@@ -3,6 +3,7 @@ items:
     title: "Sensor-based characterization of construction and demolition waste at high occupancy densities using synthetic training data and deep learning"
     authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
     venue: "Waste Management & Research 42 (9), 788-796, 2024"
+    type: journal
     citations: 21
     links:
       pdf: "https://journals.sagepub.com/doi/epub/10.1177/0734242X241231410"
@@ -13,6 +14,7 @@ items:
     title: "Sensorgestützte Charakterisierung von Bauschutt bei hohen Belegungsdichten mittels Deep Learning"
     authors: "F Kronenwett, G Maier, N Leiss, R Gruna, V Thome, T Längle"
     venue: "Recy & DepoTech-Konferenz, 2022"
+    type: conference
     citations: 3
     links:
       pdf: "https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/"
@@ -22,6 +24,7 @@ items:
     title: "Potential of Deep Learning methods for image processing in sensor-based sorting: data generation, training strategies and model architectures"
     authors: "F Kronenwett, G Maier, T Längle"
     venue: "Sensor-Based Sorting & Control, 2024"
+    type: conference
     citations: 2
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/465d1b30-02df-4ef9-a5bd-8aa453a695a8/content"
@@ -32,6 +35,7 @@ items:
     title: "Explainable AI for sensor-based sorting systems"
     authors: "M Anneken, M Veerappa, MF Huber, C Kühnert, F Kronenwett, G Maier"
     venue: "tm-Technisches Messen 90 (3), 154-166, 2023"
+    type: journal
     citations: 4
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/a778c4d8-a11b-4514-8b2b-e7a922a7c3fa/content"
@@ -42,6 +46,7 @@ items:
     title: "Regression-based age prediction of plastic waste using hyperspectral imaging"
     authors: "F Kronenwett, P Klingenberg, G Maier, T Längle, E Metzsch-Zilligen, J Beyerer"
     venue: "International Conference on Optical Characterization of Materials (OCM), 2023"
+    type: conference
     citations: 3
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/cce9625d-4ae8-47a0-a482-0d479745b9f6/content"
@@ -52,6 +57,7 @@ items:
     title: "Developing a handheld NIR sensor for the detection of ripening in grapevine"
     authors: "L Gebauer, J Krause, X Zheng, F Kronenwett, R Gruna, R Töpfer, A Kicherer"
     venue: "International Conference on Optical Characterization of Materials (OCM), 2021"
+    type: conference
     citations: 1
     links:
       pdf: "https://core.ac.uk/download/pdf/478115291.pdf#page=85"
@@ -61,6 +67,7 @@ items:
     title: "Black Plastic Identification by Hyperspectral Imaging in Mid-Wave Infrared"
     authors: "L Roming, F Kronenwett, P Bäcker, J Josekutty, G Maier, T Längle"
     venue: "Waste Management 209, 115175, 2026"
+    type: journal
     citations: 3
     links:
       pdf: "https://www.sciencedirect.com/science/article/pii/S0956053X25005860/pdfft?md5=ece324cb51eebdc3e69dd3f08a4bce1d&pid=1-s2.0-S0956053X25005860-main.pdf"
@@ -71,6 +78,7 @@ items:
     title: "Bayesian Optimization of Process Parameters of a Sensor-Based Sorting System using Gaussian Processes as Surrogate Models"
     authors: "F Kronenwett, G Maier, T Längle"
     venue: "IEEE 30th International Conference on Emerging Technologies and Factory Automation (ETFA), 2025"
+    type: conference
     citations: 2
     links:
       pdf: "https://arxiv.org/pdf/2507.22766"
@@ -81,6 +89,7 @@ items:
     title: "Adaptive architectures for semantic segmentation in the field of sensor-based sorting systems"
     authors: "F Kronenwett, R Lehmann, H Zheng, G Maier, T Längle, W Karl"
     venue: "International Conference on Optical Characterization of Materials (OCM), 2025"
+    type: conference
     citations: 0
     links:
       pdf: "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/399899fd-53d2-4191-95b0-0665f16e5c65/content"
@@ -91,6 +100,7 @@ items:
     title: "Implementation and evaluation of a real-time capable approach to sensor-based sorting using CNNs"
     authors: "F Lehnerer, L Roming, J Hock, F Kronenwett, G Maier, T Längle"
     venue: "Recy & DepoTech-Konferenz, 2024"
+    type: conference
     citations: 0
     links:
       pdf: "https://www.unileoben.ac.at/recydepotech/allgemeines/konferenzband-buch/"
@@ -100,6 +110,7 @@ items:
     title: "KI und Qualität-Detektion und Entfernung Pyrrolizidinalkaloid-haltiger Beikräuter im Erntegut mittels sensorgestützter Sortierung"
     authors: "F Kronenwett, G Maier, H Schulte, N Tron, A Krähmer"
     venue: "Tagung für Arznei-und Gewürzpflanzenforschung, 2023"
+    type: conference
     citations: 0
     links:
       pdf: "https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00054518/JKA_476_2023_4.pdf"
@@ -110,6 +121,7 @@ items:
     title: "Ripening detection in grapevine: development of a handheld NIR sensor"
     authors: "L Gebauer, J Krause, X Zheng, F Kronenwett, R Gruna, R Töpfer, A Kicherer"
     venue: "Young Scientists Meeting, 2021"
+    type: conference
     citations: 0
     links:
       pdf: "https://www.openagrar.de/servlets/MCRFileNodeServlet/openagrar_derivate_00042001/Berichte-JKI-213-32.pdf"

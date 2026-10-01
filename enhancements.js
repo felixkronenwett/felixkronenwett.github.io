@@ -34,7 +34,7 @@
     overlay.id = 'mobile-menu';
     overlay.setAttribute('aria-hidden', 'true');
     overlay.className = [
-      'fixed inset-0 z-40 bg-white/98 backdrop-blur flex flex-col items-center justify-center gap-8',
+      'fixed inset-0 z-40 bg-white/95 backdrop-blur flex flex-col items-center justify-center gap-8',
       'opacity-0 pointer-events-none transition-opacity duration-300'
     ].join(' ');
 
@@ -165,7 +165,7 @@
       // Highlight "Home" if on index, "Projects" link if on projects page, etc.
       const isCurrentPage =
         (href.includes('projects.html') && path.includes('projects')) ||
-        (href === 'index.html#top' && (path === '/' || path.includes('index')));
+        ((href === '#top' || href === 'index.html#top') && (path.endsWith('/') || path.includes('index')));
       if (isCurrentPage) {
         a.classList.add('border-b-2', 'border-[#111418]', 'pb-0.5');
       }

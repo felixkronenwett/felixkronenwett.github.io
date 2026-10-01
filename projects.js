@@ -160,8 +160,7 @@
         renderPagination(pagerEl, pages, page, (newPage) => {
           page = newPage;
           apply();
-          const heading = document.querySelector('h1,h2,h3');
-          if (heading) heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
     };

@@ -1,12 +1,19 @@
 name: Felix Kronenwett
-title: PhD Candidate at KIT (ISAS), Research Associate at Fraunhofer IOSB
+title: PhD Candidate at KIT (ISAS) · Research Associate at Fraunhofer IOSB
 bio: >
-  I am a PhD candidate at the Karlsruhe Institute of Technology (KIT), Department of Informatics, at the Intelligent Sensor-Actuator-Systems Laboratory (ISAS) supervised by Prof. Uwe Hanebeck.
-  In parallel, I work as a research associate at Fraunhofer IOSB in Karlsruhe in the Visual Inspection Systems (SPR) department in the field of sensor-based sorting systems. 
-  I specialize in signal processing, machine learning, computer vision, and hyperspectral imaging.
-  My interests include probabilistic machine learning, deep learning based computer vision, real-time systems, and creating sustainable solutions for recycling and agriculture.
-  In my doctoral research, I focus on Bayesian deep learning methods that enable models to quantify the uncertainty of their own predictions, making visual inspection systems more reliable under changing real-world conditions.
-  Through my research, I strive to advance innovative sensor technologies and data-driven approaches for efficient industrial applications.
+  I develop machine learning methods for visual inspection and sensor-based sorting.
+  I am a PhD candidate at the Intelligent Sensor-Actuator-Systems Laboratory (ISAS) at KIT and a research associate in the Visual Inspection Systems department at Fraunhofer IOSB.
+  My research focuses on Bayesian deep learning methods that quantify prediction uncertainty to make visual inspection systems more reliable under changing conditions.
+  In particular, I address challenging computer vision tasks such as segmenting bulk material at high throughput and dense material coverage.
+interests:
+  - Probabilistic Machine Learning
+  - Bayesian Deep Learning
+  - Uncertainty Quantification
+  - Computer Vision
+  - Hyperspectral Imaging
+  - Sensor-Based Sorting
+  - Real-Time Systems
+  - Sustainable Recycling & Agriculture
 links:
   scholar: https://scholar.google.com/citations?user=m-2NqOkAAAAJ&hl=en
   orcid: https://orcid.org/0009-0005-1321-4889

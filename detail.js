@@ -114,7 +114,7 @@
     };
 
     const protectedMd = protect(md);
-    marked.setOptions({ breaks: true, gfm: true, headerIds: false, mangle: false });
+    marked.setOptions({ breaks: true, gfm: true });
     const rawHtml = restore(marked.parse(protectedMd));
 
     // DOMPurify: allow span and class (needed for math placeholders)

@@ -60,19 +60,19 @@
       label === 'PDF' ? 'hover:bg-red-400' :
       label === 'DOI' ? 'hover:bg-green-400' :
       'hover:bg-blue-400';
+    a.rel = 'noopener noreferrer';
     a.className = `bg-gray-300 text-white py-1 px-4 rounded-lg text-sm font-medium transition-colors ${hover} hover:text-white`;
     a.textContent = label;
     return a;
   }
 
-  // Detect venue type: 'journal' or 'conference'
-  function venueType(venue) {
-    if (!venue) return 'other';
-    const v = venue.toLowerCase();
-    // Conference keywords
-    if (/conference|workshop|symposium|proceedings|konferenz|meeting|congress|etfa|ocm|acc|cirp|recy|depotech/i.test(v)) return 'conference';
-    // Journal keywords
-    if (/journal|transactions|magazine|review|research|letters|science|management|measurement|messen|access|technology|engineering/i.test(v)) return 'journal';
+  // Venue type: explicit `type` field in YAML wins, otherwise guess from venue name
+  function venueType(p) {
+    if (p.type === 'journal' || p.type === 'conference') return p.type;
+    const v = (p.venue || '').toLowerCase();
+    if (!v) return 'other';
+    if (/\b(conference|workshop|symposium|proceedings|konferenz|tagung|meeting|congress|etfa|ocm|recy)\b/.test(v)) return 'conference';
+    if (/\b(journal|transactions|magazine|review|research|letters|science|management|messen|access)\b/.test(v)) return 'journal';
     return 'other';
   }
 
@@ -83,7 +83,7 @@
     wrapper.dataset.year = String(p.year || '');
     wrapper.dataset.title = String(p.title || '');
     wrapper.dataset.citations = String(p.citations || 0);
-    wrapper.dataset.venuetype = venueType(p.venue || '');
+    wrapper.dataset.venuetype = venueType(p);
 
     // --- Year column (left) ---
     const yearCol = document.createElement('div');
@@ -161,6 +161,17 @@
     if (nameEl) nameEl.textContent = profile.name || '';
     if (titleEl) titleEl.textContent = profile.title || '';
     if (bioEl) bioEl.textContent = profile.bio || '';
+
+    const interestsEl = document.getElementById('profile-interests');
+    if (interestsEl && Array.isArray(profile.interests)) {
+      interestsEl.innerHTML = '';
+      profile.interests.forEach(text => {
+        const li = document.createElement('li');
+        li.className = 'text-sm text-[#111418] bg-[#f0f2f4] rounded-full px-3 py-1';
+        li.textContent = text;
+        interestsEl.appendChild(li);
+      });
+    }
 
     const linkScholar = document.getElementById('link-scholar');
     const linkOrcid = document.getElementById('link-orcid');
@@ -246,25 +257,14 @@
       });
     });
 
-    // Sorting + arrow direction indicator
+    // Sorting
     const sortSel = document.getElementById('sort-publications');
-    const sortArrow = document.getElementById('sort-arrow-icon');
-    function updateArrow(val) {
-      if (!sortArrow) return;
-      // down arrow for desc/default, up arrow for asc
-      const isAsc = val === 'year-asc' || val === 'title-asc';
-      sortArrow.innerHTML = isAsc
-        ? '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M42.34,90.34a8,8,0,0,1,11.32,0L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,42.34,90.34Z"/></svg>'
-        : '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"/></svg>';
-    }
     if (sortSel && pubsContainer) {
       sortSel.addEventListener('change', e => {
         sortEntries(pubsContainer, e.target.value);
-        updateArrow(e.target.value);
         applyFilters();
       });
       sortEntries(pubsContainer, sortSel.value);
-      updateArrow(sortSel.value);
     }
   } catch (err) {
     console.error('Failed to load data:', err);
